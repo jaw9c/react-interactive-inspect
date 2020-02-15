@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import InteractiveXPathSelector from "./";
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe("InteractiveXPathSelector", () => {
+  it("is truthy", () => {
+    expect(InteractiveXPathSelector).toBeTruthy();
+  });
+});

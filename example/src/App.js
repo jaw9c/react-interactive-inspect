@@ -1,13 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import htmlData from "./htmlData";
+import styleData from "./styleData";
 
-import ExampleComponent from 'react-interactive-inspect'
+import InteractiveXPathSelector from "react-interactive-inspect";
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+function App() {
+  const [xPath, setXPath] = React.useState();
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>XPathSelector Demo</h1>
+        {xPath}
+        <div className="container">
+          <InteractiveXPathSelector
+            html={htmlData}
+            css={styleData}
+            onSelect={path => setXPath(path)}
+          />
+        </div>
+      </header>
+    </div>
+  );
 }
+
+export default App;

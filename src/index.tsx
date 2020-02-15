@@ -1,23 +1,52 @@
-/**
- * @class ExampleComponent
- */
+import * as React from "react";
+import getPathTo from "./getPathTo";
+import styled from "styled-components";
+import parse from "html-react-parser";
+import styles from "./styles.css";
 
-import * as React from 'react'
+interface DemProps {
+  html: string;
+  css: string;
+  onSelect: (xPath?: string) => void;
+}
+const CSSWrapper = styled.html<{ css: string }>`
+  ${props => props.css}
+`;
 
-import styles from './styles.css'
-
-export type Props = { text: string }
-
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+const options = (setElement: any) => ({
+  library: {
+    cloneElement: React.cloneElement,
+    isValidElement: React.isValidElement,
+    createElement: (Name: any, props: any, children: any) => (
+      <Name
+        {...props}
+        onClick={(e: React.MouseEvent) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setElement(e.target);
+        }}
+      >
+        {children}
+      </Name>
     )
   }
-}
+});
+
+const InteractiveXPathSelector: React.FC<DemProps> = props => {
+  const [element, setElement] = React.useState<HTMLElement>();
+
+  const newElementSet = (elementNew: HTMLElement) => {
+    element && element.removeAttribute("ixpathisselected");
+    setElement(elementNew);
+    elementNew.setAttribute("ixpathisselected", "true");
+    props.onSelect(getPathTo(elementNew));
+  };
+
+  return (
+    <CSSWrapper css={props.css} className={styles.cssWrapContainer}>
+      {parse(props.html, options(newElementSet))}
+    </CSSWrapper>
+  );
+};
+
+export default InteractiveXPathSelector;

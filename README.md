@@ -19,7 +19,7 @@ yarn add react-interactive-inspect
 ```tsx
 import * as React from "react";
 
-import XPathSelector from "react-interactive-inspect";
+import InteractiveXPathSelector from "react-interactive-inspect";
 
 const htmlData = "<html><ul><li>1</li><li>2</li><li>3</li></ul></html>";
 const cssData = "ul { paddingBottom: 10px }";
@@ -27,7 +27,7 @@ const cssData = "ul { paddingBottom: 10px }";
 class Example extends React.Component {
   render() {
     return (
-      <XPathSelector
+      <InteractiveXPathSelector
         html={htmlData}
         css={cssData}
         onSelect={path => console.log(path)}
