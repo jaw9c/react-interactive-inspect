@@ -6,6 +6,10 @@
 
 ![](banner.gif)
 
+## Demo
+
+https://react-interactive-inspect.netlify.com
+
 ## Install
 
 ```bash
