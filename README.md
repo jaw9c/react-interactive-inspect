@@ -26,17 +26,13 @@ import InteractiveXPathSelector from "react-interactive-inspect";
 const htmlData = "<html><ul><li>1</li><li>2</li><li>3</li></ul></html>";
 const cssData = "ul { paddingBottom: 10px }";
 
-class Example extends React.Component {
-  render() {
-    return (
-      <InteractiveXPathSelector
-        html={htmlData}
-        css={cssData}
-        onSelect={path => console.log(path)}
-      />
-    );
-  }
-}
+const Example: React.FC = () => (
+  <InteractiveXPathSelector
+    html={htmlData}
+    css={cssData}
+    onSelect={path => console.log(path)}
+  />
+);
 ```
 
 ## License
