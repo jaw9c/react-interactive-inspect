@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>XPathSelector Demo</h1>
-        {xPath}
+        <span className="path">{xPath}</span>
         <div className="container">
           <InteractiveXPathSelector
             html={htmlData}

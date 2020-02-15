@@ -43,3 +43,7 @@ code {
 .container {
   width: 80%;
 }
+
+.path {
+  margin-bottom: 20px;
+}
