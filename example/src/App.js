@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>XPathSelector Demo</h1>
-        <span className="path">{xPath}</span>
+        <h1>react-interactive-inspect Demo</h1>
+        <span className="path">Xpath: {xPath}</span>
         <div className="container">
           <InteractiveXPathSelector
             html={htmlData}
