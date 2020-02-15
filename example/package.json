@@ -1,6 +1,5 @@
 {
   "name": "react-interactive-inspect-example",
-  "homepage": "https://jaw9c.github.io/react-interactive-inspect",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -16,8 +15,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   }
 }
