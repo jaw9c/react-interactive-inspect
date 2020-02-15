@@ -1,6 +1,6 @@
 {
   "name": "react-interactive-inspect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A react component to select part of a webpage, given raw html and css",
   "author": "jaw9c",
   "license": "MIT",
