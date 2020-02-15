@@ -1,7 +1,7 @@
 {
   "name": "react-interactive-inspect",
   "version": "1.0.0",
-  "description": "A react component to select part of a webpage, given the raw html and css as strings",
+  "description": "A react component to select part of a webpage, given raw html and css",
   "author": "jaw9c",
   "license": "MIT",
   "repository": "jaw9c/react-interactive-inspect",

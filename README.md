@@ -10,18 +10,29 @@
 npm install --save react-interactive-inspect
 ```
 
+```bash
+yarn add react-interactive-inspect
+```
+
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from "react";
 
-import MyComponent from 'react-interactive-inspect'
+import XPathSelector from "react-interactive-inspect";
+
+const htmlData = "<html><ul><li>1</li><li>2</li><li>3</li></ul></html>";
+const cssData = "ul { paddingBottom: 10px }";
 
 class Example extends React.Component {
-  render () {
+  render() {
     return (
-      <MyComponent />
-    )
+      <XPathSelector
+        html={htmlData}
+        css={cssData}
+        onSelect={path => console.log(path)}
+      />
+    );
   }
 }
 ```
