@@ -1,6 +1,6 @@
 # react-interactive-inspect
 
-> A react component to select part of a webpage, given the raw html and css as strings
+> Inspect element component for React. Current funcionality provides the XPath of the element selected, based for the use case of an standard (non-tech) user to be able to select elements to otherwise process. 
 
 [![NPM](https://img.shields.io/npm/v/react-interactive-inspect.svg)](https://www.npmjs.com/package/react-interactive-inspect) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
